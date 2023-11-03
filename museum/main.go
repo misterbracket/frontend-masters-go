@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"net/http"
 
+	"maxklammer.com/go/museum/api"
 	"maxklammer.com/go/museum/data"
 )
 
@@ -33,7 +34,7 @@ func main() {
 
 	server.HandleFunc("/hello", handleHello)
 	server.HandleFunc("/templates", handleTemplate)
-	// server.HandleFunc("/api/exhibitions", api.Get)
+	server.HandleFunc("/api/exhibitions", api.Get)
 	// server.HandleFunc("/api/exhibitions/new", api.Post)
 
 	fs := http.FileServer(http.Dir("./public"))
