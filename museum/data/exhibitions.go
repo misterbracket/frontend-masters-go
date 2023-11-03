@@ -37,3 +37,7 @@ var list = []Exhibition{
 func GetAll() []Exhibition {
 	return list
 }
+
+func Add(exp Exhibition) {
+	list = append(list, exp)
+}
